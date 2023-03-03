@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6C66B55A29B24E3B00AE43EE /* CancionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C66B55829B24E3B00AE43EE /* CancionCell.swift */; };
+		6C66B55B29B24E3B00AE43EE /* CancionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C66B55929B24E3B00AE43EE /* CancionCell.xib */; };
 		6CB5416A29B244FA00F54FBB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CB5416929B244FA00F54FBB /* AppDelegate.swift */; };
 		6CB5416C29B244FA00F54FBB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CB5416B29B244FA00F54FBB /* SceneDelegate.swift */; };
 		6CB5416E29B244FA00F54FBB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CB5416D29B244FA00F54FBB /* ViewController.swift */; };
@@ -19,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6C66B55829B24E3B00AE43EE /* CancionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancionCell.swift; sourceTree = "<group>"; };
+		6C66B55929B24E3B00AE43EE /* CancionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CancionCell.xib; sourceTree = "<group>"; };
 		6CB5416629B244FA00F54FBB /* ReproductorMusica.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReproductorMusica.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6CB5416929B244FA00F54FBB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6CB5416B29B244FA00F54FBB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -72,6 +76,8 @@
 				6CB5417D29B2471700F54FBB /* Extension+UIVView.swift */,
 				6CB5417F29B24B8700F54FBB /* PreviewViewController.swift */,
 				6CB5418129B24B9300F54FBB /* PlayViewController.swift */,
+				6C66B55829B24E3B00AE43EE /* CancionCell.swift */,
+				6C66B55929B24E3B00AE43EE /* CancionCell.xib */,
 			);
 			path = ReproductorMusica;
 			sourceTree = "<group>";
@@ -137,6 +143,7 @@
 				6CB5417629B244FC00F54FBB /* LaunchScreen.storyboard in Resources */,
 				6CB5417329B244FC00F54FBB /* Assets.xcassets in Resources */,
 				6CB5417129B244FA00F54FBB /* Main.storyboard in Resources */,
+				6C66B55B29B24E3B00AE43EE /* CancionCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -152,6 +159,7 @@
 				6CB5416A29B244FA00F54FBB /* AppDelegate.swift in Sources */,
 				6CB5418029B24B8700F54FBB /* PreviewViewController.swift in Sources */,
 				6CB5418229B24B9300F54FBB /* PlayViewController.swift in Sources */,
+				6C66B55A29B24E3B00AE43EE /* CancionCell.swift in Sources */,
 				6CB5416C29B244FA00F54FBB /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
