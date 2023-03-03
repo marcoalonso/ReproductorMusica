@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ListaCancionesViewController: UIViewController, UITableViewDelegate {
+class ListaCancionesViewController: UIViewController {
     
     @IBOutlet weak var tablaCanciones: UITableView!
     var viewModel = CancionViewModel()
@@ -22,9 +22,10 @@ class ListaCancionesViewController: UIViewController, UITableViewDelegate {
         
         
     }
+    
 }
 
-extension ListaCancionesViewController: UITableViewDataSource {
+extension ListaCancionesViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         viewModel.canciones.count
     }
@@ -35,6 +36,14 @@ extension ListaCancionesViewController: UITableViewDataSource {
         return celda
     }
     
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "PreviewViewController") as! PreviewViewController
+        vc.modalTransitionStyle = .crossDissolve
+        vc.modalPresentationStyle = .fullScreen
+        vc.cancion = viewModel.canciones[indexPath.row]
+        present(vc, animated: true)
+    }
 }
 

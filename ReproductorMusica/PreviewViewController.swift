@@ -8,22 +8,54 @@
 import UIKit
 
 class PreviewViewController: UIViewController {
+    
+    @IBOutlet weak var posterCancion: UIImageView!
+    @IBOutlet weak var autorCancion: UILabel!
+    @IBOutlet weak var nombreCancion: UILabel!
+    @IBOutlet weak var playView: UIView!
+    @IBOutlet weak var letraCancion: UITextView!
+    
+    var cancion: Cancion?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        configurarVistas()
+        
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func configurarVistas(){
+        guard let cancion else { return }
+        print(cancion)
+        
+        letraCancion.text = cancion.letra
+        print(cancion.letra)
+        nombreCancion.text = cancion.nombre
+        autorCancion.text = cancion.artista
+        posterCancion.image = cancion.imagen
+        
+        playView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(playAction)))
     }
-    */
+    
+    @objc func playAction(){
+        reproducirCancion()
+    }
+    
+    func reproducirCancion(){
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "PlayViewController") as! PlayViewController
+        vc.modalPresentationStyle = .fullScreen
+        vc.modalTransitionStyle = .crossDissolve
+        self.present(vc, animated: true)
+    }
+
+    @IBAction func playActionButton(_ sender: UIButton) {
+        reproducirCancion()
+    }
+    @IBAction func backButton(_ sender: UIButton) {
+        self.dismiss(animated: true)
+    }
+    
+    
 
 }

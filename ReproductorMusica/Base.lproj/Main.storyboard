@@ -52,43 +52,43 @@
         <!--Preview View Controller-->
         <scene sceneID="bEH-Ks-21r">
             <objects>
-                <viewController id="uwZ-as-adg" customClass="PreviewViewController" customModule="ReproductorMusica" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PreviewViewController" id="uwZ-as-adg" customClass="PreviewViewController" customModule="ReproductorMusica" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Bfh-69-ora">
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="foto" translatesAutoresizingMaskIntoConstraints="NO" id="5P0-ga-AC4">
-                                <rect key="frame" x="0.0" y="0.0" width="430" height="350"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="350" id="oSg-Hd-Fv5"/>
-                                </constraints>
+                                <rect key="frame" x="0.0" y="0.0" width="430" height="450"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KDj-3h-hb8">
-                                <rect key="frame" x="30" y="30" width="45" height="45"/>
+                                <rect key="frame" x="20" y="40" width="30" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="45" id="E6z-Ke-oEh"/>
-                                    <constraint firstAttribute="height" constant="45" id="crU-Lc-d7j"/>
+                                    <constraint firstAttribute="width" constant="30" id="E6z-Ke-oEh"/>
+                                    <constraint firstAttribute="height" constant="30" id="crU-Lc-d7j"/>
                                 </constraints>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title=" ">
                                     <backgroundConfiguration key="background" image="arrow.backward" catalog="system"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="backButton:" destination="uwZ-as-adg" eventType="touchUpInside" id="rLm-NI-eZ9"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="J1S-uG-y9f">
-                                <rect key="frame" x="20" y="370" width="390" height="508"/>
+                                <rect key="frame" x="20" y="470" width="390" height="408"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="cj2-K7-LQ5">
-                                        <rect key="frame" x="66.333333333333343" y="0.0" width="257.33333333333326" height="36"/>
+                                        <rect key="frame" x="66.333333333333343" y="0.0" width="257.33333333333326" height="24"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Ojitos lindos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NEL-O1-PuK">
-                                                <rect key="frame" x="0.0" y="0.0" width="158.66666666666666" height="36"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="158.66666666666666" height="24"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bad bunny" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aIH-Hx-7eU">
-                                                <rect key="frame" x="163.66666666666669" y="0.0" width="93.666666666666686" height="36"/>
+                                                <rect key="frame" x="163.66666666666669" y="0.0" width="93.666666666666686" height="24"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -96,7 +96,7 @@
                                         </subviews>
                                     </stackView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8mK-K7-mev">
-                                        <rect key="frame" x="27.666666666666657" y="53" width="335" height="50"/>
+                                        <rect key="frame" x="27.666666666666657" y="41" width="335" height="50"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="do3-nu-8kP">
                                                 <rect key="frame" x="94.666666666666671" y="10" width="145.66666666666663" height="30"/>
@@ -117,14 +117,19 @@
                                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="Reproducir"/>
+                                                        <connections>
+                                                            <action selector="playActionButton:" destination="uwZ-as-adg" eventType="touchUpInside" id="2wP-lD-oEq"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </stackView>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstItem="do3-nu-8kP" firstAttribute="centerY" secondItem="8mK-K7-mev" secondAttribute="centerY" id="0CY-w4-8La"/>
                                             <constraint firstAttribute="height" constant="50" id="TSv-uZ-mA5"/>
+                                            <constraint firstAttribute="width" constant="335" id="nHY-d0-d64"/>
                                             <constraint firstItem="do3-nu-8kP" firstAttribute="centerX" secondItem="8mK-K7-mev" secondAttribute="centerX" id="ymW-DY-Wi8"/>
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
@@ -133,87 +138,32 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="9qo-RP-WW0">
-                                        <rect key="frame" x="27.666666666666657" y="120" width="335" height="388"/>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="9qo-RP-WW0">
+                                        <rect key="frame" x="20" y="108" width="350" height="300"/>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="300" id="b1U-uo-lSd"/>
+                                        </constraints>
                                         <string key="text">Hace mucho tiempo le hago caso al corazón
-Y pasan los día', los mese' pensando en tu olor
-Ha llegado el tiempo para usar la razón
-Ante' que sea tarde y sin querer me parta en do'
-Antes de que salga el sol y hunda el acelerador
-Que vaya sin frenos y pierda el control
-Nada más seremos do', tú y yo acariciándono'
-En medio del tiempo, sin decir adiós
-Y solo mírame con esos ojito' lindo'
-Que con eso yo estoy bien
-Hoy he vuelto a nacer
-Hacе tiempo que no agarro a nadie de la mano
-Hace tiempo que no envío: "Buenos días, te amo"
-Pero tú me tiene' enredao, me envolví
-Iba por mi camino y me perdí
-Mi mirada cambió cuando tus ojos vi
-Bye-bye a los culo', ni me despedí
-Yo no te busqué, no
-Chocamo' en el trayecto
-Con tu alma es la que yo conecto
-Tranquila, no tiene que ser perfecto, no
-Aquí no existe el pecado
-Y equivocarse es bonito
-Los errore' son placere'
-Igual que to' tus besito'
-Y solo mírame con esos ojito' lindo'
-Que con eso yo estoy bien
-Hoy he vuelto a nacer
-Y solo mírame con esos ojito' lindo'
-Que con eso yo estoy bien
-Hoy he vuelto a nacer
-Tú y yo, tú y yo, tú y yo (tú y yo, tú y yo)
-Tú y yo, tú y yo (tú y yo, tú y yo), tú y yo
-Tú y yo, tú y yo
-Tú y yo, tú y yo
-Yo no me dejo llevar de nadie
-Yo solo me dejo llevar de tu sonrisa
-Y del lunar cerquita de tu boca
-Si yo estoy loco, tú estás loquita
-Pero, baby, como tú no hay otra, no
-Quiero regalarte girasole'
-Ir pa la playa y buscarte caracole'
-Cuando estoy contigo, yo no miro el Rolex
-Vamo' a bailar 200 cancione'
-Nadie me pone como tú me pone'
-Mmm, mm-mm, mmm
-Mmm, mm-mm, mmm
-Yo le hablo a Dio' y tú ere' su respuesta
-Aprendí que los momento' lindo' nunca cuestan
-Como cuando me regalas tu mirada
-Y el sol, su puesta (ey, ey), y el sol, su puesta
-Cuando estoy encima de ti, de ti
-Mami, yo me olvido de todo, de todo
-No hace falta nadie aquí
-Solamente tú y yo
-Antes de que salga el sol y hunda el acelerador
-Que vaya sin frenos y pierda el control
-Nada más seremos do', tú y yo acariciándono'
-En medio del tiempo, sin decir adiós
-Y solo mírame con esos ojito' lindo'
-Que con eso yo estoy bien
-Hoy he vuelto a nacer
-Y solo mírame con esos ojito' lindo'
-Que con eso yo estoy bien
-Hoy he vuelto a nacer</string>
+Y pasan los día', los mese' </string>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="9qo-RP-WW0" firstAttribute="leading" secondItem="J1S-uG-y9f" secondAttribute="leading" constant="20" id="UjO-s9-jgT"/>
+                                    <constraint firstAttribute="trailing" secondItem="9qo-RP-WW0" secondAttribute="trailing" constant="20" id="f3q-pB-Q7U"/>
+                                    <constraint firstAttribute="bottom" secondItem="9qo-RP-WW0" secondAttribute="bottom" id="up4-v5-SVj"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="y7n-Ue-AGV"/>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="KDj-3h-hb8" firstAttribute="top" secondItem="Bfh-69-ora" secondAttribute="top" constant="30" id="Oyk-mC-RTW"/>
+                            <constraint firstItem="KDj-3h-hb8" firstAttribute="top" secondItem="Bfh-69-ora" secondAttribute="top" constant="40" id="Oyk-mC-RTW"/>
                             <constraint firstItem="y7n-Ue-AGV" firstAttribute="bottom" secondItem="J1S-uG-y9f" secondAttribute="bottom" constant="20" id="POL-yt-XMF"/>
-                            <constraint firstItem="KDj-3h-hb8" firstAttribute="leading" secondItem="Bfh-69-ora" secondAttribute="leading" constant="30" id="bTy-y3-aR2"/>
+                            <constraint firstItem="KDj-3h-hb8" firstAttribute="leading" secondItem="Bfh-69-ora" secondAttribute="leading" constant="20" id="bTy-y3-aR2"/>
                             <constraint firstItem="5P0-ga-AC4" firstAttribute="leading" secondItem="y7n-Ue-AGV" secondAttribute="leading" id="dT8-qb-fgL"/>
                             <constraint firstItem="5P0-ga-AC4" firstAttribute="top" secondItem="Bfh-69-ora" secondAttribute="top" id="fBz-yY-evJ"/>
                             <constraint firstItem="J1S-uG-y9f" firstAttribute="trailing" secondItem="Bfh-69-ora" secondAttribute="trailing" constant="-20" id="m2t-r6-oh4"/>
@@ -223,6 +173,13 @@ Hoy he vuelto a nacer</string>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="1Uo-8F-QG7"/>
+                    <connections>
+                        <outlet property="autorCancion" destination="aIH-Hx-7eU" id="LkF-rZ-RGP"/>
+                        <outlet property="letraCancion" destination="9qo-RP-WW0" id="COR-vl-sL5"/>
+                        <outlet property="nombreCancion" destination="NEL-O1-PuK" id="hX1-st-mDr"/>
+                        <outlet property="playView" destination="8mK-K7-mev" id="QlR-Fv-YLO"/>
+                        <outlet property="posterCancion" destination="5P0-ga-AC4" id="gXv-1U-jvq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3f3-YE-95L" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -231,7 +188,7 @@ Hoy he vuelto a nacer</string>
         <!--Play View Controller-->
         <scene sceneID="ASF-7W-A5u">
             <objects>
-                <viewController id="MHR-D9-2N5" customClass="PlayViewController" customModule="ReproductorMusica" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PlayViewController" id="MHR-D9-2N5" customClass="PlayViewController" customModule="ReproductorMusica" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iZP-Cl-Q7n">
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -240,16 +197,19 @@ Hoy he vuelto a nacer</string>
                                 <rect key="frame" x="0.0" y="0.0" width="430" height="643.33333333333337"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="juO-P1-u8I">
-                                <rect key="frame" x="30" y="30" width="45" height="45"/>
+                                <rect key="frame" x="20" y="40" width="30" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="45" id="Vm4-bn-9m8"/>
-                                    <constraint firstAttribute="height" constant="45" id="dUc-cW-8ar"/>
+                                    <constraint firstAttribute="width" constant="30" id="Vm4-bn-9m8"/>
+                                    <constraint firstAttribute="height" constant="30" id="dUc-cW-8ar"/>
                                 </constraints>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title=" ">
                                     <backgroundConfiguration key="background" image="xmark.circle" catalog="system"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="cerrarButton:" destination="MHR-D9-2N5" eventType="touchUpInside" id="igt-jb-pGW"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="yf9-gj-ZJG">
                                 <rect key="frame" x="20" y="643.33333333333337" width="390" height="254.66666666666663"/>
@@ -361,8 +321,8 @@ Hoy he vuelto a nacer</string>
                             <constraint firstItem="7bI-Gm-eSM" firstAttribute="trailing" secondItem="96A-Cw-gi9" secondAttribute="trailing" id="NTJ-cU-HMH"/>
                             <constraint firstItem="7bI-Gm-eSM" firstAttribute="top" secondItem="iZP-Cl-Q7n" secondAttribute="top" id="VMr-Jj-IDY"/>
                             <constraint firstItem="96A-Cw-gi9" firstAttribute="trailing" secondItem="yf9-gj-ZJG" secondAttribute="trailing" constant="20" id="YXj-0H-Rbc"/>
-                            <constraint firstItem="juO-P1-u8I" firstAttribute="leading" secondItem="iZP-Cl-Q7n" secondAttribute="leading" constant="30" id="hzy-2z-T5v"/>
-                            <constraint firstItem="juO-P1-u8I" firstAttribute="top" secondItem="iZP-Cl-Q7n" secondAttribute="top" constant="30" id="nDM-Gz-UvN"/>
+                            <constraint firstItem="juO-P1-u8I" firstAttribute="leading" secondItem="iZP-Cl-Q7n" secondAttribute="leading" constant="20" id="hzy-2z-T5v"/>
+                            <constraint firstItem="juO-P1-u8I" firstAttribute="top" secondItem="iZP-Cl-Q7n" secondAttribute="top" constant="40" id="nDM-Gz-UvN"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="OmG-Or-PaE"/>
