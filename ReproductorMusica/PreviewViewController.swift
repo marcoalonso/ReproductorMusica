@@ -46,6 +46,8 @@ class PreviewViewController: UIViewController {
         let vc = storyboard.instantiateViewController(withIdentifier: "PlayViewController") as! PlayViewController
         vc.modalPresentationStyle = .fullScreen
         vc.modalTransitionStyle = .crossDissolve
+        guard let cancion else { return }
+        vc.nombreCancion = cancion.nombre
         self.present(vc, animated: true)
     }
 

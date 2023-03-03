@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="0LL-Md-h55">
     <device id="retina6_72" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -194,7 +195,7 @@ Y pasan los día', los mese' </string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="foto" translatesAutoresizingMaskIntoConstraints="NO" id="7bI-Gm-eSM">
-                                <rect key="frame" x="0.0" y="0.0" width="430" height="643.33333333333337"/>
+                                <rect key="frame" x="0.0" y="0.0" width="430" height="638.33333333333337"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="juO-P1-u8I">
                                 <rect key="frame" x="20" y="40" width="30" height="30"/>
@@ -212,7 +213,7 @@ Y pasan los día', los mese' </string>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="yf9-gj-ZJG">
-                                <rect key="frame" x="20" y="643.33333333333337" width="390" height="254.66666666666663"/>
+                                <rect key="frame" x="20" y="638.33333333333337" width="390" height="249.66666666666663"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="146" translatesAutoresizingMaskIntoConstraints="NO" id="h6P-Rw-mKG">
                                         <rect key="frame" x="102.66666666666667" y="0.0" width="184.66666666666663" height="39.666666666666664"/>
@@ -235,6 +236,9 @@ Y pasan los día', los mese' </string>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="35" id="X6Q-Id-FB8"/>
                                                 </constraints>
+                                                <connections>
+                                                    <action selector="progresoCancionSlider:" destination="MHR-D9-2N5" eventType="valueChanged" id="Zvq-oI-kug"/>
+                                                </connections>
                                             </slider>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="285" translatesAutoresizingMaskIntoConstraints="NO" id="cPx-eu-sJv" userLabel="time ">
                                                 <rect key="frame" x="0.0" y="40" width="390" height="30"/>
@@ -260,51 +264,47 @@ Y pasan los día', los mese' </string>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="37" translatesAutoresizingMaskIntoConstraints="NO" id="u2N-L2-icj" userLabel="Buttons">
-                                        <rect key="frame" x="8.6666666666666572" y="209.66666666666663" width="373" height="45"/>
+                                        <rect key="frame" x="21" y="209.66666666666663" width="348" height="40"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bt3-ee-XvV">
-                                                <rect key="frame" x="0.0" y="0.0" width="45" height="45"/>
+                                                <rect key="frame" x="0.0" y="1.6666666666666643" width="40" height="37"/>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title=" ">
-                                                    <backgroundConfiguration key="background" image="shuffle" catalog="system"/>
-                                                </buttonConfiguration>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title=" " backgroundImage="shuffle" catalog="system"/>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fKk-oo-lh3">
-                                                <rect key="frame" x="82" y="0.0" width="45" height="45"/>
+                                                <rect key="frame" x="77" y="-1" width="40" height="40.666666666666664"/>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title=" ">
-                                                    <backgroundConfiguration key="background" image="gobackward.10" catalog="system"/>
-                                                </buttonConfiguration>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title=" " backgroundImage="gobackward.10" catalog="system"/>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S59-r9-fa8">
-                                                <rect key="frame" x="164" y="0.0" width="45" height="45"/>
+                                                <rect key="frame" x="154" y="1" width="40" height="38.666666666666671"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="45" id="CzD-2t-CG6"/>
-                                                    <constraint firstAttribute="height" constant="45" id="qIO-PJ-vKZ"/>
+                                                    <constraint firstAttribute="width" constant="40" id="CzD-2t-CG6"/>
+                                                    <constraint firstAttribute="height" constant="40" id="qIO-PJ-vKZ"/>
                                                 </constraints>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title=" ">
-                                                    <backgroundConfiguration key="background" image="play.circle.fill" catalog="system"/>
-                                                </buttonConfiguration>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title=" " backgroundImage="play.circle.fill" catalog="system"/>
+                                                <connections>
+                                                    <action selector="playButton:" destination="MHR-D9-2N5" eventType="touchUpInside" id="Bpj-XZ-ueP"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jax-RO-7yj">
-                                                <rect key="frame" x="246" y="0.0" width="45" height="45"/>
+                                                <rect key="frame" x="231" y="-1" width="40" height="40.666666666666664"/>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title=" ">
-                                                    <backgroundConfiguration key="background" image="goforward.10" catalog="system"/>
-                                                </buttonConfiguration>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title=" " backgroundImage="goforward.10" catalog="system"/>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gsW-Mp-edq">
-                                                <rect key="frame" x="328" y="0.0" width="45" height="45"/>
+                                                <rect key="frame" x="308" y="2.3333333333333321" width="40" height="35.333333333333343"/>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title=" ">
-                                                    <backgroundConfiguration key="background" image="stop.fill" catalog="system"/>
-                                                </buttonConfiguration>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title=" " backgroundImage="stop.fill" catalog="system"/>
+                                                <connections>
+                                                    <action selector="stopButton:" destination="MHR-D9-2N5" eventType="touchUpInside" id="69Y-dV-Y9U"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -316,7 +316,7 @@ Y pasan los día', los mese' </string>
                         <constraints>
                             <constraint firstItem="yf9-gj-ZJG" firstAttribute="top" secondItem="7bI-Gm-eSM" secondAttribute="bottom" id="5Fv-Bn-Lau"/>
                             <constraint firstItem="yf9-gj-ZJG" firstAttribute="leading" secondItem="iZP-Cl-Q7n" secondAttribute="leading" constant="20" id="IMz-Oc-GSH"/>
-                            <constraint firstItem="96A-Cw-gi9" firstAttribute="bottom" secondItem="yf9-gj-ZJG" secondAttribute="bottom" id="LtR-jC-fro"/>
+                            <constraint firstItem="96A-Cw-gi9" firstAttribute="bottom" secondItem="yf9-gj-ZJG" secondAttribute="bottom" constant="10" id="LtR-jC-fro"/>
                             <constraint firstItem="7bI-Gm-eSM" firstAttribute="leading" secondItem="96A-Cw-gi9" secondAttribute="leading" id="LvC-2D-6rl"/>
                             <constraint firstItem="7bI-Gm-eSM" firstAttribute="trailing" secondItem="96A-Cw-gi9" secondAttribute="trailing" id="NTJ-cU-HMH"/>
                             <constraint firstItem="7bI-Gm-eSM" firstAttribute="top" secondItem="iZP-Cl-Q7n" secondAttribute="top" id="VMr-Jj-IDY"/>
@@ -326,6 +326,11 @@ Y pasan los día', los mese' </string>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="OmG-Or-PaE"/>
+                    <connections>
+                        <outlet property="playButton" destination="S59-r9-fa8" id="zxd-DK-9aE"/>
+                        <outlet property="tiempoActualLabel" destination="OKM-ye-DUj" id="QGm-V7-Llg"/>
+                        <outlet property="tiempoRestanteLabel" destination="wUd-5J-WOs" id="Atm-nc-P4X"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zGE-DI-oap" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
