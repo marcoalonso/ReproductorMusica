@@ -32,6 +32,9 @@ extension ListaCancionesViewController: UITableViewDataSource, UITableViewDelega
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let celda = tableView.dequeueReusableCell(withIdentifier: "celda", for: indexPath) as! CancionCell
+        celda.posterCancion.image = viewModel.canciones[indexPath.row].imagen
+        celda.nombreCancion.text = viewModel.canciones[indexPath.row].nombre
+        celda.autorCancion.text = viewModel.canciones[indexPath.row].autor
         
         return celda
     }

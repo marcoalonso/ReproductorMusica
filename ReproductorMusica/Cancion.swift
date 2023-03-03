@@ -10,7 +10,7 @@ import UIKit
 
 struct Cancion {
     let nombre: String
-    let artista: String
+    let autor: String
     let imagen: UIImage
     let letra: String
 }

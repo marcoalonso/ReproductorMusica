@@ -31,7 +31,7 @@ class PreviewViewController: UIViewController {
         letraCancion.text = cancion.letra
         print(cancion.letra)
         nombreCancion.text = cancion.nombre
-        autorCancion.text = cancion.artista
+        autorCancion.text = cancion.autor
         posterCancion.image = cancion.imagen
         
         playView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(playAction)))
