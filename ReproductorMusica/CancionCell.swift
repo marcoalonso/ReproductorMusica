@@ -9,6 +9,9 @@ import UIKit
 
 class CancionCell: UITableViewCell {
 
+    @IBOutlet weak var autorCancion: UILabel!
+    @IBOutlet weak var nombreCancion: UILabel!
+    @IBOutlet weak var posterCancion: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
